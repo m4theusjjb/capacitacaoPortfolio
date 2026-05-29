@@ -6,21 +6,29 @@
     line-height: 18px;
 }
 
+main {
+    color: white;
+    background-color: #ff4105;
+}
+
 header {
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    padding: 1rem 2rem;
-    background-color: #08cb00;
+    padding: 1rem 1.5rem;
+    background-color: black;
     color: white;
 
-    box-shadow: 0px 4px 12px #59b359;
+    box-shadow: 0px 4px 12px black;
+    position: relative;
+    z-index: 10;
 }
 
 header h1{
     font-style: 22px;
     font-weight: 500;
+    color: #ff4105;
 }
 
 header nav{
@@ -34,5 +42,66 @@ header nav a{
     font-size: 16px;
     font-weight: 500;
     text-decoration: none;
+}
+
+header nav a:hover{
+    transform: scale(1.2,1.2);
+    transition: 0.1s;
+}
+
+#home{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 700px;
+}
+
+.home-cta{
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    justify-content: center;
+
+    height: 500px;
+    padding: 0 1.5rem;
+
+
+    background-image: url(/assets/img/redSnake.jpg);
+    background-repeat: no-repeat;
+    background-position: -3rem;
+    background-size: 500px;
+    
+
+    a{
+        background-color: white;
+        width: fit-content;
+        padding: 0.75rem 1.5rem;
+        border-radius: 0.5rem;
+        font-size: 14px;
+        color: #ff4105;
+        text-decoration: none;
+    }
+}
+
+.home-cta a:hover{
+    transform: scale(1.1,1.1);
+    transition: 0.1s;
+}
+
+.home-heading {
+    display: flex;
+    flex-direction: column;
+
+    h1{
+        font-size: 24px;
+        line-height: 36px;
+        font-weight: 500;
+        margin: 0;
+    }
+
+    p{
+        line-height: 24px;
+        margin: 0;
+    }
 }
 
