@@ -5,3 +5,34 @@
     font-size: 14px;
     line-height: 18px;
 }
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 1rem 2rem;
+    background-color: #08cb00;
+    color: white;
+
+    box-shadow: 0px 4px 12px #59b359;
+}
+
+header h1{
+    font-style: 22px;
+    font-weight: 500;
+}
+
+header nav{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+header nav a{
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
