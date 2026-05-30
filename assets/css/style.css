@@ -51,6 +51,7 @@ header nav a:hover{
     transition: 0.1s;
 }
 
+
 /* Home */
 
 #home{
@@ -91,6 +92,10 @@ header nav a:hover{
     }
 }
 
+#home > img{
+    display: none;
+}
+
 .home-cta a:hover{
     transform: scale(1.1,1.1);
     transition: 0.1s;
@@ -113,6 +118,25 @@ header nav a:hover{
     }
 }
 
+
+@media screen and (min-width: 1024px) {
+
+    #home{ 
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    #home > img {
+        display: block;
+        width: 444px;
+        height: 444px;
+    }
+
+    .home-cta{
+        background: none;
+    }
+    
+}
 /* Sobre */
 
 #sobre{
@@ -130,15 +154,22 @@ header nav a:hover{
         text-transform: uppercase;
     }
 
-    img{
+    img {
+        width: 100%;
         border-radius: 2rem;
     }
+}
+
+.mobile-sobre > img{
+    width: 100%;
+    border-radius: 2rem;
 }
 
 .sobre-links{
     display: flex;
     width: 100%;
     gap: 1.5rem;
+    flex-wrap: wrap;
 
      a{
         display: flex;
@@ -157,6 +188,37 @@ header nav a:hover{
 .sobre-links a:hover{
     transform: scale(1.1,1.1);
     transition: 0.1s;
+}
+
+.desktop-sobre{
+    display: none;
+    gap: 1.5rem;
+}
+
+.desktop-sobre > img{
+    border-radius: 2rem;
+    max-width: 460px;
+}
+
+.sobre-left{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+@media screen and (min-width:1024px){
+    .mobile-sobre{
+        display: none;
+    }
+
+    .desktop-sobre{
+        display: flex;
+        flex-direction: row;
+        gap: 92px;
+    }
+    
+    .desktop-sobre > h2{
+        margin: 0;
+    }
 }
 
 section {
@@ -198,6 +260,7 @@ section {
 .cards-wrapper{
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 1rem;
 }
 
@@ -206,18 +269,29 @@ section {
     color: white;
     padding: 1.25rem;
     border-radius: 4px;
-
-    img{
-        width: 100%;
-        border-radius: 2.5rem;
-    }
-
-    h3{
-        font-weight: 18px;
-        font-weight: 500;
-    }
+    max-width: 250px;
 }
 
+.card > img{
+    width: 100%;
+    border-radius: 2.5rem;
+}
+
+.card > h3 {
+    font-weight: 18px;
+    font-weight: 500;
+}
+
+@media screen and (min-width: 1024px){
+    #projetos{
+        align-items: center;
+    }
+
+    .cards-wrapper{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
 /*Serviços e Conhecimentos*/
 
 #servicos-conhecimentos {
@@ -241,7 +315,7 @@ section {
    display: flex;
    flex-direction: column;
    gap: 1rem;
-
+   flex-wrap: wrap;
    margin: 0;
    padding: 0;
 
@@ -279,6 +353,25 @@ section {
     }
 }
 
+@media screen and (min-width: 1024px){
+    #servicos-conhecimentos{
+        flex-direction: row;
+    }
+
+    #servicos-conhecimentos > div {
+        flex-basis: 50%;
+    }
+    .servicos-list{
+        flex-direction: column;
+    }
+
+    .servicos-list > li {
+        align-items: start;
+        height: 64px;
+        max-width: 320px;
+    }
+    
+}
 /*Contato*/
 #contato{
 
@@ -326,6 +419,11 @@ section {
     }
 }
 
+@media screen and (min-width: 1024px) {
+    #contato{
+        align-items: center;
+    }
+}
 /*Footer*/
 footer{
     display: flex;
